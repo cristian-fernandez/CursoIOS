@@ -1,0 +1,6 @@
+APP de recetas de cocina:
+Descripcion de la funcionalidad:
+  La aplicacion tendra una pagina de inicio la cual tendra un menu con una lista de tipos de comidas (recetas con carne, recetas con pollo, etc), despues tendra un view que contendra un UICollection para mostra la receta como tal. Cuando el usuario seleccione una receta, el app mostrara una pantalla detalle con la preparacion de la receta y unas imagenes de la receta.
+
+Descripcion tecnica:
+Los datos se almaceran en el coredata para trabajarlo offline, el server tendra un rails para tener los datos. 
