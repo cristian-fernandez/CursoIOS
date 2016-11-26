@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GSX-bD-A4k">
+                                <rect key="frame" x="15" y="35" width="505" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="e8u-4i-E7a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gak-q9-E53">
+                                <rect key="frame" x="535" y="35" width="50" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Iee-z0-NnG"/>
+                                    <constraint firstAttribute="width" constant="50" id="mub-yb-UbC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="Procesar"/>
+                                <connections>
+                                    <action selector="procesaDivisores:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ESP-bB-AeN"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lGw-CO-JYX">
+                                <rect key="frame" x="0.0" y="85" width="600" height="515"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="css-Ng-y4B"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="z0s-rK-l6n"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GSX-bD-A4k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="1xN-Sb-QSM"/>
+                            <constraint firstItem="lGw-CO-JYX" firstAttribute="top" secondItem="GSX-bD-A4k" secondAttribute="bottom" constant="15" id="43n-wT-wfO"/>
+                            <constraint firstItem="Gak-q9-E53" firstAttribute="leading" secondItem="GSX-bD-A4k" secondAttribute="trailing" constant="15" id="ABO-xE-Hfk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Gak-q9-E53" secondAttribute="bottom" constant="15" id="Eoy-Vk-yNY"/>
+                            <constraint firstAttribute="trailing" secondItem="Gak-q9-E53" secondAttribute="trailing" constant="15" id="FCF-nh-qs0"/>
+                            <constraint firstItem="GSX-bD-A4k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="KcZ-u9-8ys"/>
+                            <constraint firstItem="GSX-bD-A4k" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="Kmr-jQ-zLt"/>
+                            <constraint firstAttribute="trailing" secondItem="lGw-CO-JYX" secondAttribute="trailing" id="P7v-qM-nJM"/>
+                            <constraint firstItem="GSX-bD-A4k" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="UWd-Cg-rYK"/>
+                            <constraint firstItem="Gak-q9-E53" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="WiG-ra-a4j"/>
+                            <constraint firstItem="Gak-q9-E53" firstAttribute="leading" secondItem="GSX-bD-A4k" secondAttribute="trailing" constant="15" id="aX2-1C-dzT"/>
+                            <constraint firstItem="Gak-q9-E53" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="akW-LO-uGF"/>
+                            <constraint firstItem="lGw-CO-JYX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cX5-3p-3nU"/>
+                            <constraint firstAttribute="trailing" secondItem="Gak-q9-E53" secondAttribute="trailing" constant="15" id="ifc-Zx-CPn"/>
+                            <constraint firstItem="Gak-q9-E53" firstAttribute="leading" secondItem="GSX-bD-A4k" secondAttribute="trailing" constant="15" id="jXX-WI-uRW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lGw-CO-JYX" secondAttribute="bottom" id="qV8-BM-wM7"/>
+                            <constraint firstItem="Gak-q9-E53" firstAttribute="leading" secondItem="GSX-bD-A4k" secondAttribute="trailing" constant="15" id="tG3-vs-sf5"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1xN-Sb-QSM"/>
+                                <exclude reference="UWd-Cg-rYK"/>
+                                <exclude reference="ABO-xE-Hfk"/>
+                                <exclude reference="FCF-nh-qs0"/>
+                                <exclude reference="WiG-ra-a4j"/>
+                                <exclude reference="aX2-1C-dzT"/>
+                                <exclude reference="jXX-WI-uRW"/>
+                                <exclude reference="Eoy-Vk-yNY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="NumeroTextField" destination="GSX-bD-A4k" id="QR1-SI-jTu"/>
+                        <outlet property="tableView" destination="lGw-CO-JYX" id="kAB-sR-L9g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="259" y="327"/>
+        </scene>
+    </scenes>
+</document>
