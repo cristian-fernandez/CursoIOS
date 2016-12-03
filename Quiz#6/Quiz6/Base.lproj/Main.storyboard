@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaB-tQ-uA9">
+                                <rect key="frame" x="0.0" y="0.0" width="239" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="ygL-gN-JVI"/>
+                                </constraints>
+                                <state key="normal" title="O"/>
+                                <connections>
+                                    <action selector="OrderByNum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tth-dA-NND"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsf-g1-Nfv">
+                                <rect key="frame" x="239" y="0.0" width="361" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="im1-Ld-3ka"/>
+                                </constraints>
+                                <state key="normal" title="A"/>
+                                <connections>
+                                    <action selector="OrderByAlphabetic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gac-MK-sgv"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wpq-FM-9Nu">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="eLd-lY-iAD"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="R1z-K8-p8Z"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Zsf-g1-Nfv" secondAttribute="bottom" constant="556" id="1nK-la-vqk"/>
+                            <constraint firstItem="Zsf-g1-Nfv" firstAttribute="leading" secondItem="iaB-tQ-uA9" secondAttribute="trailing" id="4bI-pa-QpA"/>
+                            <constraint firstAttribute="trailing" secondItem="Zsf-g1-Nfv" secondAttribute="trailing" id="Eup-ld-guC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wpq-FM-9Nu" secondAttribute="bottom" id="G8s-QO-QAR"/>
+                            <constraint firstItem="wpq-FM-9Nu" firstAttribute="top" secondItem="Zsf-g1-Nfv" secondAttribute="bottom" id="K4Z-P5-Oog"/>
+                            <constraint firstItem="iaB-tQ-uA9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="48" id="OaT-aL-37s"/>
+                            <constraint firstAttribute="trailing" secondItem="wpq-FM-9Nu" secondAttribute="trailing" id="WO3-c7-nzp"/>
+                            <constraint firstItem="iaB-tQ-uA9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Wou-Ay-Dj9"/>
+                            <constraint firstItem="iaB-tQ-uA9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Y3p-jH-ZsP"/>
+                            <constraint firstItem="Zsf-g1-Nfv" firstAttribute="baseline" secondItem="iaB-tQ-uA9" secondAttribute="baseline" constant="-10" id="YrD-uv-uvM"/>
+                            <constraint firstItem="Zsf-g1-Nfv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gmv-cr-rY8"/>
+                            <constraint firstItem="wpq-FM-9Nu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wRB-nx-vT1"/>
+                            <constraint firstItem="Zsf-g1-Nfv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="239" id="xyk-mi-cGR"/>
+                            <constraint firstItem="iaB-tQ-uA9" firstAttribute="leading" secondItem="wpq-FM-9Nu" secondAttribute="leading" id="zSO-nz-cGu"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="OaT-aL-37s"/>
+                                <exclude reference="Y3p-jH-ZsP"/>
+                                <exclude reference="1nK-la-vqk"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="NameTable" destination="wpq-FM-9Nu" id="Exj-7p-5I7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="259" y="327"/>
+        </scene>
+    </scenes>
+</document>
